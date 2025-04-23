@@ -1,3 +1,6 @@
+create_env:
+	python -m venv .airflow &&\
+		source .airflow/Scripts/activate &&\
 install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
@@ -23,3 +26,8 @@ deploy:
 	#deploy goes here
 		
 all: install lint test format deploy
+
+
+
+# py -m venv .airflow
+# source .airflow/Scripts/activate
